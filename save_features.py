@@ -70,7 +70,7 @@ if __name__ == '__main__':
     else:
         loadfile = configs.data_dir[params.dataset] + split + '.json'
 
-    checkpoint_dir = '%s/checkpoints/%s/%s_%s' %(configs.save_dir, params.dataset, params.model, params.method)
+    checkpoint_dir = '%s/checkpoints_%s_%s_%s' %(configs.save_dir, params.dataset, params.model, params.method)
     if params.train_aug:
         checkpoint_dir += '_aug'
     if not params.method in ['baseline', 'baseline++'] :
